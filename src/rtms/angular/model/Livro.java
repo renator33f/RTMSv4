@@ -28,6 +28,8 @@ public class Livro {
 	private Long ano;
 
 	private Long paginas;
+	
+	private Long edicao;
 
 	@Column(columnDefinition = "text")
 	private String foto;
@@ -36,9 +38,29 @@ public class Livro {
 	@ForeignKey(name = "fornecedor_fk")
 	private Fornecedor fornecedor;
 	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@ForeignKey(name = "genero_fk")
+	private Genero genero;
+	
 	private String valor = "";
 	
 	
+	public Long getEdicao() {
+		return edicao;
+	}
+
+	public void setEdicao(Long edicao) {
+		this.edicao = edicao;
+	}
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
+	}
+
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}

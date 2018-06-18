@@ -30,6 +30,7 @@
 		<mapping class="rtms.angular.model.Livro" />
 		<mapping class="rtms.angular.model.Pedido" />
 		<mapping class="rtms.angular.model.ItemPedido" />
+	    <mapping class="rtms.angular.model.Genero" />
 		
 		
 	</session-factory>

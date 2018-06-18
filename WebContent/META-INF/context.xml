@@ -20,7 +20,7 @@
                 antiResourceLocking="false"
 				username="postgres" 
 				password="admin" 
-				url="jdbc:postgresql://localhost:5432/lojartms?autoReconnect=true"/>
+				url="jdbc:postgresql://localhost:5432/rtms?autoReconnect=true"/>
 				
 	<!-- http://tomee.apache.org/datasource-config.html -->	
 	<!-- maxActive máximo transações ativas -->

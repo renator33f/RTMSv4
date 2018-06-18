@@ -4,7 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["C:\\workspace\\loja-rtms\\src\\relatorios\\"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["C:\\workspace\\RTMSv4\\src\\relatorios\\"]]></defaultValueExpression>
 	</parameter>
 	<queryString>
 		<![CDATA[]]>

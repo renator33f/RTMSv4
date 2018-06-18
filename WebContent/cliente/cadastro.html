@@ -2,15 +2,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
-<h1>Cadastro de clientes</h1>
-<a href="#clientelist"> Lista de clientes <img alt="Novo"
+<h1>Cadastro de Clientes</h1>
+<a href="#clientelist"> Lista de Clientes <img alt="Novo"
 	src="resources/img/list-icon.png" border="0">
 </a>
 
 <br />
 <br />
 
-<div class="col-lg-9 col-md-8"  ng-init="carregarEstados();">
+<div class="col-lg-10 col-md-8"  ng-init="carregarEstados();">
 	<div class="card">
 		<div class="content">
 			<form id="formCliente" ng-submit="salvarCliente();">
@@ -41,24 +41,47 @@
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
+							<label>Cpf</label> 
+							<input type="text" class="form-control" id="cpf" name="cpf" ng-model="cliente.cpf" placeholder="CPF" >						
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
 							<label for="endereco">Endereço</label> <input type="text"
 								required="required" class="form-control border-input"
 								ng-model="cliente.endereco" placeholder="Endereço">
 						</div>
 					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<div class="form-group">
-							<label>Telefone</label> <input type="text" id="telefone"
-								ng-model="cliente.telefone" class="form-control border-input"
-								placeholder="Telefone" required="required">
-
+							<label>Bairro</label> 
+							<input type="text" required="required" class="form-control border-input" ng-model="cliente.bairro" placeholder="Bairro" >						
 						</div>
 					</div>
-					
-					
+					<div class="col-md-3">
+						<div class="form-group">
+							<label>CEP</label> 
+							<input type="text" class="form-control border-input" id="cep" name="cep" ng-model="cliente.cep" placeholder="CEP" >						
+						</div>
+					</div>	
+					<div class="col-md-3">
+						<div class="form-group">
+							<label>Tel.Residencial</label> <input type="text" id="telefone"
+								ng-model="cliente.telefone" class="form-control border-input"
+								placeholder="Telefone" required="required">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label>Tel.Celular</label> <input type="text" id="telefone2"
+								ng-model="cliente.telefone2" class="form-control border-input"
+								placeholder="Celular">
+
+						</div>
+					</div>			        					
+				</div>
+
+				<div class="row">									
 					<div class="col-md-5">
 						<div class="form-group">
 							<label>Sexo</label> 
@@ -101,18 +124,7 @@
 							<input type="radio" class="form-control" name="interesse" ng-model="cliente.interesse" value="analise">						
 						</div>
 					</div>
-				</div>
-				
-				
-				<div class="row">
-					<div class="col-md-3">
-						<div class="form-group">
-							<label>Cpf</label> 
-							<input type="text" class="form-control" id="cpf" name="cpf" ng-model="cliente.cpf" >						
-						</div>
-					</div>
-			   </div>		
-				
+				</div>			
 				
 				<div class="row">
 					<div class="col-md-3">
@@ -156,6 +168,8 @@
 	</div>
  <script type="text/javascript">
  	$('#telefone').mask('(99) 9999-9999');
+ 	$('#telefone2').mask('(99) 99999-9999');
  	$('#cpf').mask('999.999.999-99');
+ 	$('#cep').mask('99999-999')
  </script>	
 </html>

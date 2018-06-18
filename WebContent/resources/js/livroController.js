@@ -18,8 +18,15 @@ app.controller('livroController', function($scope, $http, $location, $routeParam
 				}).error(function(data, status, headers, config) {
 					erro("Error: " + status);
 				});
-			
-			
+				
+				//------------------ carrega genero do livro em edição
+				setTimeout(function () {
+					$("#selectGenero").prop('selectedIndex', (new Number($scope.livro.genero.id) + 1));
+									
+				
+				}, 1000);
+				//----------------------
+					
 		}).error(function(data, status, headers, config) {
 			erro("Error: " + status);
 		});
@@ -98,6 +105,16 @@ app.controller('livroController', function($scope, $http, $location, $routeParam
 			$scope.fornecedoresList = response;
 		}).error(function(data, status, headers, config) {
 			erro("Error: " + status);
+		});
+	};
+	
+	// carrega os gêneros ao iniciar a tela de cadastro 
+	$scope.carregarGenero = function() {
+		$scope.dataGenero = [{}];
+		$http.get("genero/listar").success(function(response) {
+			$scope.dataGenero = response;
+		}).error(function(response) {
+			erro("Error: " + response);
 		});
 	};
 	

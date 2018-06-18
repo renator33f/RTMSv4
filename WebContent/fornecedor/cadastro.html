@@ -2,15 +2,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
-<h1>Cadastro de fornecedor</h1>
-<a href="#fornecedorlist"> Lista de fornecedores <img alt="Novo"
+<h1>Cadastro de Editora</h1>
+<a href="#fornecedorlist"> Lista de Editoras <img alt="Novo"
 	src="resources/img/list-icon.png" border="0">
 </a>
 
 <br />
 <br />
 
-<div class="col-lg-9 col-md-8"  ng-init="carregarEstados();">
+<div class="col-lg-10 col-md-8"  ng-init="carregarEstados();">
 	<div class="card">
 		<div class="content">
 			<form id="formFornecedor" ng-submit="salvarFornecedor();">
@@ -23,7 +23,7 @@
 						</div>
 					</div>
 				
-					<div class="col-md-3">
+					<div class="col-md-2">
 						<div class="form-group">
 							<label>Id</label> <input type="text" ng-model="fornecedor.id"
 								class="form-control border-input" disabled />
@@ -46,20 +46,40 @@
 								ng-model="fornecedor.nomeFantasia" placeholder="Nome Fantansia">
 						</div>
 					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label>Cnpj</label> <input type="text" id="cnpj"
+								ng-model="fornecedor.cnpj" class="form-control border-input"
+								placeholder="Cnpj" required="required">
+						</div>
+					</div>
+					
 				</div>
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-6">
 						<div class="form-group">
 							<label for="endereco">Endereço</label> <input type="text"
 								required="required" class="form-control border-input"
 								ng-model="fornecedor.endereco" placeholder="Endereço">
 						</div>
 					</div>
-				</div>
-				
-
-				<div class="row">
-					<div class="col-md-5">
+					
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="bairro">Bairro</label> <input type="text"
+								required="required" class="form-control border-input"
+								ng-model="fornecedor.bairro" placeholder="Bairro">
+						</div>
+					</div>
+					
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="endereco">CEP</label> <input type="text" id="cep"
+								   class="form-control border-input"
+								ng-model="fornecedor.cep" placeholder="CEP">
+						</div>
+					</div>
+					<div class="col-md-3">
 						<div class="form-group">
 							<label>Telefone</label> <input type="text" id="telefone"
 								ng-model="fornecedor.telefone" class="form-control border-input"
@@ -68,16 +88,18 @@
 						</div>
 					</div>
 					
-					
-					<div class="col-md-5">
+					<div class="col-md-3">
 						<div class="form-group">
-							<label>Cnpj</label> <input type="text" id="cnpj"
-								ng-model="fornecedor.cnpj" class="form-control border-input"
-								placeholder="Cnpj" required="required">
+							<label>Telefone 2</label> <input type="text" id="telefone2"
+								ng-model="fornecedor.telefone2" class="form-control border-input"
+								placeholder="Telefone">
+
 						</div>
-					</div>
-					
-					
+					</div>		
+				</div>
+				
+
+				<div class="row">									
 					<div class="col-md-1">
 						<div class="form-group">
 							<label>Ativo</label> 
@@ -87,7 +109,7 @@
 				</div>
 				
 				<div class="row">
-					<div class="col-md-7">
+					<div class="col-md-5">
 						<div class="form-group">
 							<label>Insrição Estadual</label> 
 							<input type="number" class="form-control" id="cpf" name="cpf" ng-model="fornecedor.inscricaoEstadual" placeholder="Insrição Estadual">						
@@ -138,6 +160,8 @@
 	</div>
  <script type="text/javascript">
  	$('#telefone').mask('(99) 9999-9999');
- 	$('#cnpj').mask('999.999.999/9999-9');
+ 	$('#telefone2').mask('(99) 99999-9999');
+ 	$('#cep').mask('99999-999');
+ 	$('#cnpj').mask('999.999.999/9999-99');
  </script>	
 </html>

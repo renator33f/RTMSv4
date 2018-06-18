@@ -1,4 +1,3 @@
-
 CREATE TABLE usuario (
     id integer NOT NULL,
     login character varying(100) NOT NULL,

@@ -21,13 +21,19 @@ public class Fornecedor {
 
 	private String nomeFantasia;
 
-	private String endereco;
-
 	private String cnpj;
+	
+	private String endereco;
+	
+	private String bairro;
+	
+	private String cep;
 
 	private Long inscricaoEstadual;
 	
 	private String telefone;
+	
+	private String telefone2;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@ForeignKey(name = "estados_fk")
@@ -42,7 +48,30 @@ public class Fornecedor {
 	
 	private Boolean ativo;
 	
-	
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public String getTelefone2() {
+		return telefone2;
+	}
+
+	public void setTelefone2(String telefone2) {
+		this.telefone2 = telefone2;
+	}
+
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}

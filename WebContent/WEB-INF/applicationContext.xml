@@ -57,6 +57,11 @@
 		class="rtms.angular.controller.EstadosController">
 		<constructor-arg value="rtms.angular.model.Estados" />
 	</bean>
+	
+	<bean id="generoController" name="generoController"
+		class="rtms.angular.controller.GeneroController">
+		<constructor-arg value="rtms.angular.model.Genero" />
+	</bean>
 
 	<bean id="cidadesController" name="cidadesController"
 		class="rtms.angular.controller.CidadesController">

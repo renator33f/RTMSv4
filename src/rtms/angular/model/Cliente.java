@@ -31,6 +31,8 @@ public class Cliente implements Serializable {
 	private String endereco;
 
 	private String telefone;
+	
+	private String telefone2;
 
 	private String sexo; 
 	
@@ -39,6 +41,10 @@ public class Cliente implements Serializable {
 	private String interesse;
 	
 	private String cpf;
+	
+	private String bairro;
+	
+	private String cep;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
 	@ForeignKey(name="estados_fk")
@@ -52,6 +58,30 @@ public class Cliente implements Serializable {
 	@Column(columnDefinition="text")
 	private String foto;
 	
+	public String getTelefone2() {
+		return telefone2;
+	}
+
+	public void setTelefone2(String telefone2) {
+		this.telefone2 = telefone2;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
